@@ -3,3 +3,7 @@
 /.gradle/*
 /.idea/*
 /build/*
+/starter/build/*
+/starter/out/*
+/demo/build/*
+/demo/out/*
