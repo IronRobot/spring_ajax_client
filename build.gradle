@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        maven {
+            url 'http://tsa.oa.com/nexus3/repository/maven-public/'
+        }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.0.RELEASE")
+    }
+}
+allprojects{
+    repositories {
+        mavenCentral()
+    }
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    dependencies {
+        compile("org.springframework.boot:spring-boot-starter-web:2.0.0.RELEASE")
+        compile("org.springframework.boot:spring-boot-starter-thymeleaf:2.0.0.RELEASE")
+        testCompile("junit:junit:4.12")
+    }
+}

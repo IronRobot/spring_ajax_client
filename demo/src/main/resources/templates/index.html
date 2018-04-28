@@ -1,0 +1,27 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/hello_js"></script>
+</head>
+<body>
+
+<button id="bt">doAjax</button>
+</body>
+<script type="text/javascript">
+    console.log(routes);
+
+    $('#bt').on('click',function(e){
+        console.log(routes);
+        routes.spring.ajax.demo.controller.Controller.simpleRequestBodyController({
+            "a":123,
+            "b":"b1"
+        },0700).ajax({
+            "beforeSend":function(){
+                console.log("add more ajax setting")
+            }
+        }).then(function(rst){console.log(rst)});
+    })
+</script>
+
+
+</html>

@@ -1,0 +1,10 @@
+apply plugin: 'maven-publish'
+archivesBaseName = "spring-boot-starter-ajaxclient"
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
