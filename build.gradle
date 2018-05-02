@@ -1,8 +1,6 @@
 buildscript {
     repositories {
-        maven {
-            url 'http://tsa.oa.com/nexus3/repository/maven-public/'
-        }
+        mavenCentral() 
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.0.RELEASE")
