@@ -6,5 +6,5 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface CSRF {
-    String tokenHeader() default "csrf_token";
+    String tokenHeader() default "csrf-token";
 }
