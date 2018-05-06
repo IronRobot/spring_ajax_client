@@ -15,7 +15,7 @@ spring-boot-ajax-starter 主要是为了简化基于spring-boot开发的web项�
         @AjaxMapping(path = "/a_{id}")
         public String simpleRequestBodyController(@RequestBody Map<String, String> map, @PathVariable int id)
 
-        //AjaxMapping 是继承RequestMapping、ResponseBody的注解，用来明确的声明那些需要暴露给ajax的方法。
+        //AjaxMapping 是继承RequestMapping、ResponseBody的注解，用来明确的声明那些需要暴露给ajax的方法。
         // 目前支持的参数类型包括：@Pathvariable @RequestParam @RequestBody @Header
 - Client Side:
 
@@ -46,7 +46,7 @@ spring-boot-ajax-starter 主要是为了简化基于spring-boot开发的web项�
 
 ## 扩展:
 
-项目提供了自定义 js template 的能力来优化生成的js代码（比如不依赖jquery ？)，个人JS 小白，欢迎贡献更好的实现
+项目提供了自定义 js template 的能力来优化生成的js代码（比如不依赖jquery ？)，个人JS小白，欢迎贡献更好的实现
 
 js template 应该是合法的thymeleaf 模板， 框架在渲染模板时提供以下context variable:
 
