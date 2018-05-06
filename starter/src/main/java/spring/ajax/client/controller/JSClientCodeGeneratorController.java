@@ -86,7 +86,7 @@ public class JSClientCodeGeneratorController implements EmbeddedValueResolverAwa
 
         String tokenInSession = (String) request.getSession().getAttribute("csrf_token");
 
-        return String.format("%s(%s)",js,tokenInSession);
+        return String.format("%s('%s')",js,tokenInSession);
     }
 
 
@@ -114,7 +114,6 @@ public class JSClientCodeGeneratorController implements EmbeddedValueResolverAwa
         Context context = new Context();
         context.setVariable("methods", methods);
         context.setVariable("context_path",servletContextPath);
-//        context.setVariable("csrfToken",csrfTokenService.getToken());
         try {
             ObjectMapper mapper = new ObjectMapper();
 
