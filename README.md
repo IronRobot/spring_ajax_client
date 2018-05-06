@@ -1,7 +1,7 @@
 
 ## Why：
 
-spring-boot-ajax-starter 主要是为了简化基于spring-boot开发的web项目中前端JS调用后端Controller的代码，
+spring-boot-ajax-starter 主要是为了简化基于spring-boot开发的web项目中前端JS调用后端Controller的代码，
 提供与后端Controller的方法签名基本一致的方法调用来发起Ajax请求。
 
 
