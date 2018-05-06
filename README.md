@@ -41,7 +41,7 @@ spring-boot-ajax-starter 主要是为了简化基于spring-boot开发的web项�
 ### 配置项
 
 在application.properties中支持以下配置项:
-1. `spring.ajax.client.js_path=/hello_js` : 定义生成js的访问路径
+1. `spring.ajax.client.js_path=/hello_js` : 定义生成js的访问路径
 2. `spring.ajax.client.code_template=classpath:/spring/ajax/client/controller/default_template.js` : 自定义生成JS的模板，关于模板参考扩展一节的介绍
 
 ## 扩展:
