@@ -13,22 +13,22 @@ import javax.servlet.http.HttpSession;
  * 要求请求时header中必须有与session中相同的token，header的name可以配置
  */
 public class CSRFProtectInterceptor implements HandlerInterceptor {
-    public static final String CSRF_TOKEN = "csrf_token";
+    public static final String CSRF_TOKEN = "csrf-token";
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         HttpSession session = request.getSession();
         if (session.getAttribute(CSRF_TOKEN) == null) {
             synchronized (session) {
-                if (session.getAttribute("csrf_token") == null) {
-                    session.setAttribute("csrf_token", System.nanoTime() + "");
+                if (session.getAttribute(CSRF_TOKEN) == null) {
+                    session.setAttribute(CSRF_TOKEN, System.nanoTime() + "");
                 }
             }
         } else {
             if (handler instanceof HandlerMethod) {
                 HandlerMethod method = (HandlerMethod) handler;
                 if (method.hasMethodAnnotation(CSRF.class)) {
-                    return session.getAttribute("csrf_token").equals(
+                    return session.getAttribute(CSRF_TOKEN).equals(
                             request.getHeader(method.getMethodAnnotation(CSRF.class).tokenHeader()));
                 }
             }
