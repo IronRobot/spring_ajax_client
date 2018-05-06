@@ -1,5 +1,5 @@
 
-## Why：
+## Why：
 
 spring-boot-ajax-starter 主要是为了简化基于spring-boot开发的web项目中前端JS调用后端Controller的代码，
 提供与后端Controller的方法签名基本一致的方法调用来发起Ajax请求。
@@ -7,7 +7,7 @@ spring-boot-ajax-starter 主要是为了简化基于spring-boot开发的web项�
 
 ## How：
 
-- Dependency:在maven或gradle中增加以下依赖:
+- Dependency:在maven或gradle中增加以下依赖:
 
         compile "com.github.ironrobot:spring-boot-starter-ajaxclient:0.0.1"
 - Server Side 声明供ajax访问的方法,如:
@@ -42,7 +42,7 @@ spring-boot-ajax-starter 主要是为了简化基于spring-boot开发的web项�
 
 在application.properties中支持以下配置项:
 1. `spring.ajax.client.js_path=/hello_js` : 定义生成js的访问路径
-2. `spring.ajax.client.code_template=classpath:/spring/ajax/client/controller/default_template.js` : 自定义生成JS的模板，关于模板参考扩展一节的介绍
+2. `spring.ajax.client.code_template=classpath:/spring/ajax/client/controller/default_template.js` : 自定义生成JS的模板，关于模板参考扩展一节的介绍
 
 ## 扩展:
 
