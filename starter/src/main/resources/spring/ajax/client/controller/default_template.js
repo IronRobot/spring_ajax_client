@@ -8,7 +8,7 @@ var routes = (function (csrf_token) {
     /*[+
                 methods = [(${methods_json})];
                 [#th:block th:if="${context_path !=null && !context_path.isEmpty()}"]
-                base_path = [(${context_path})];
+                base_path = "[(${context_path})]";
                 [/th:block]
     +]*/
 
