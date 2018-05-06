@@ -2,5 +2,5 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 dependencies {
     compile("org.springframework.boot:spring-boot-devtools")
-    compile(project(":starter"))
+    compile("com.github.ironrobot:spring-boot-starter-ajaxclient:0.0.1")
 }
