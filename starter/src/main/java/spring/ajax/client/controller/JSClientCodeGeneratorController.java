@@ -35,6 +35,8 @@ import java.lang.reflect.Type;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static spring.ajax.client.interceptor.CSRFProtectInterceptor.CSRF_TOKEN;
+
 @Controller
 public class JSClientCodeGeneratorController implements EmbeddedValueResolverAware, ApplicationContextAware, ApplicationListener<ContextRefreshedEvent> {
 
@@ -84,7 +86,7 @@ public class JSClientCodeGeneratorController implements EmbeddedValueResolverAwa
     @ResponseBody
     public String doIt(HttpServletRequest request) {
 
-        String tokenInSession = (String) request.getSession().getAttribute("csrf_token");
+        String tokenInSession = (String) request.getSession().getAttribute(CSRF_TOKEN);
 
         return String.format("%s('%s')",js,tokenInSession);
     }
