@@ -55,7 +55,7 @@ var routes = (function (csrf_token) {
         $.each(arg["RequestHeader"],function(i,h){
             headers[h.name] = h.value;
         });
-        headers["csrf_token"] = csrf_token;
+        headers["csrf-token"] = csrf_token;
 
         // 3. deal Params
         var reqParam = {};
