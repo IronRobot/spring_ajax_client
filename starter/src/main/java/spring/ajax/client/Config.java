@@ -11,7 +11,7 @@ import spring.ajax.client.interceptor.CSRFProtectInterceptor;
 @ComponentScan
 public class Config implements WebMvcConfigurer {
 
-    @Value("${ajax_client.csrf_on:true}")
+    @Value("${ajax_client.csrf_on:false}")
     private boolean csrfProtectOn;
 
     @Override
